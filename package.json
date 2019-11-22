@@ -1,0 +1,15 @@
+{
+  "name": "kolia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "demo project",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MykolaBondarchuk/9-js-ui-wdio-MykolaBondarchuk.git"
+  },
+  "author": "Kolia Bondarchuk <m.bondarcuk93@gmail.com>",
+  "license": "ISC"
+}
