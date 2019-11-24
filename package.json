@@ -11,5 +11,8 @@
     "url": "git+https://github.com/MykolaBondarchuk/9-js-ui-wdio-MykolaBondarchuk.git"
   },
   "author": "Kolia Bondarchuk <m.bondarcuk93@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/cli": "^5.16.7"
+  }
 }
