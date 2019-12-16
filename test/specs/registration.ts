@@ -25,10 +25,11 @@ describe('User', function() {
        const alert = $('#notices .alert-success')
 
        assert(alert.isDisplayed(), `Expected success alert`)
-       
 
-
-       browser.debug();
-
+       const alertText = alert.getText()
+       const expectedText = 'Your customer account has been created.'
+       assert(alertText.includes(expectedText),
+        `Alert text "${alertText}" to match: "${expectedText}" because it is understandable`); 
+    
     })
 })
