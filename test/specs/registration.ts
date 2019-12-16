@@ -16,6 +16,8 @@ describe('User', function() {
        $('input[name="phone"]').setValue(phone)
        $(".row input[name='password']").setValue(randomEmail)
        $('input[name="confirmed_password"]').setValue(randomEmail)
+       $("button[name='create_account']").click()
+
        browser.debug();
 
     })
