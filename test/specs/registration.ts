@@ -33,3 +33,30 @@ describe('User', function() {
     
     })
 })
+
+
+
+describe('User', function() {
+    it('Can contact us', function() {
+        browser.url(`/customer-service-s-0`)
+
+        const emailForContact = faker.internet.email
+        $('input[name="phone"]').setValue(emailForContact)
+        $("").setValue(emailForContact)
+        $('input[name="subject"]').setValue(emailForContact)
+        $('textarea[name="message"]').setValue('test')
+        $('button[name="send"]').click()
+        browser.pause(3000)
+
+        const alert = $('div[class="alert alert-success"]')
+
+        assert(alert.isDisplayed(), `Expected success alert`)
+
+        const alertText = alert.getText()
+        const expectedText = ` Your email has successfully been sent`
+        assert(alertText.includes(expectedText),
+        `Alert text "${alertText}" to match: "${expectedText}" because it is clear`);
+
+    })
+})
+    
