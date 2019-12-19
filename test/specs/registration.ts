@@ -32,31 +32,31 @@ describe('User', function() {
         `Alert text "${alertText}" to match: "${expectedText}" because it is understandable`); 
     
     })
-})
 
+    
 
-
-describe('User', function() {
-    it('Can contact us', function() {
+it.only('Can contact us', function() {
         browser.url(`/customer-service-s-0`)
 
-        const emailForContact = faker.internet.email
-        $('input[name="phone"]').setValue(emailForContact)
-        $("").setValue(emailForContact)
+        const emailForContact = faker.internet.email();
+        $('input[name="name"]').setValue(emailForContact)
+        $("[name='contact_form'] [name='email']").setValue(emailForContact)
         $('input[name="subject"]').setValue(emailForContact)
         $('textarea[name="message"]').setValue('test')
         $('button[name="send"]').click()
         browser.pause(3000)
 
-        const alert = $('div[class="alert alert-success"]')
+        const alert = $('div[class="alert alert-success"]');
 
         assert(alert.isDisplayed(), `Expected success alert`)
 
         const alertText = alert.getText()
-        const expectedText = ` Your email has successfully been sent`
+        const expectedText = `Your email has successfully been sent`
         assert(alertText.includes(expectedText),
         `Alert text "${alertText}" to match: "${expectedText}" because it is clear`);
 
     })
+
+
 })
     
