@@ -1,11 +1,13 @@
-export class ProductDetails {
-    private path:string = '/ProductDetails';
-    
+import { BasePage } from "./base";
 
-    public open() {
-        browser.url(this.path);
+export class ProductDetailsPage extends BasePage {
+   
+    addToCart() {
+        $('button[name="add_cart_product"]').click()
+        browser.pause(3000);
     }
 }
 
+export const ProductDetails = new ProductDetailsPage()
 
 // export const ProductDetails = new ProductDetailsPage()

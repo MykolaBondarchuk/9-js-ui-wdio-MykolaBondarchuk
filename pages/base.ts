@@ -1,11 +1,8 @@
-export class BasePage{
-    private path:string
 
-    constructor(path:string){
-        this.path=path;
-    }
-
-    public open() {
-            browser.url(this.path);
-        }
+export class BasePage {
+    open(path: string) {
+        browser.url(path)
+    } 
 }
+
+export const Base = new BasePage()

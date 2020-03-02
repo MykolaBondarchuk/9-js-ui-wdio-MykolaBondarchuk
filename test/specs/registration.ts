@@ -2,7 +2,7 @@ import * as faker from 'faker';
 
 import * as assert from 'assert';
 
-describe('User', function() {
+describe('User',  function() {
     it('can register', function() {
        browser.url(`/create_account`)
        $('input[name="firstname"]').setValue('Test')
@@ -60,3 +60,12 @@ it.only('Can contact us', function() {
 
 })
     
+
+it('can search', function() {
+    browser.url('/')
+    
+
+    browser.pause(300)
+
+
+})
